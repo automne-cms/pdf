@@ -165,4 +165,11 @@ if (!defined('K_TITLE_MAGNIFICATION')) {
 if (!defined('K_SMALL_RATIO')) {
 	define('K_SMALL_RATIO', 2/3);
 }
+
+/**
+ * reduction factor for small font
+ */
+if (!defined('PDF_DEFAULT_CACHE_LENGTH')) {
+	define('PDF_DEFAULT_CACHE_LENGTH', 3600);
+}
 ?>

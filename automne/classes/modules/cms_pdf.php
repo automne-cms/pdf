@@ -72,6 +72,7 @@ class CMS_module_cms_pdf extends CMS_moduleValidation
 					default:
 						$return = array (
 							"atm-pdf-link" 			=> array("selfClosed" => false, "parameters" => array()),
+							"atm-pdf-skip" 			=> array("selfClosed" => false, "parameters" => array()),
 						);
 					break;
 				}
@@ -101,7 +102,14 @@ class CMS_module_cms_pdf extends CMS_moduleValidation
 					return false;
 				}
 				switch ($tag->getName()) {
-					case "atm-pdf-link":
+					case 'atm-pdf-skip':
+						if ($visualizationMode == PAGE_VISUALMODE_HTML_PUBLIC_INDEXABLE) {
+							return '';
+						} else {
+							return $tag->getInnerContent();
+						}
+					break;
+					case 'atm-pdf-link':
 						$linkAttributes = $tag->getAttributes();
 						//set default page attribute if not exists
 						if (!isset($linkAttributes['page'])) {
