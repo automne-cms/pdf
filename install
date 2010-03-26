@@ -154,6 +154,7 @@
 >	/automne/tcpdf/unicode_data.php
 >	/automne/tcpdf/cache/.htaccess
 >	/pdf/pdf.php
+>	/img/cms_pdf/loader.gif
 >	/sql/messages/fr/cms_pdf.sql
 >	/sql/messages/en/cms_pdf.sql
 >	/sql/mod_cms_pdf.sql
