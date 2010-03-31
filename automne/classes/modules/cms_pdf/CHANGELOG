@@ -1,2 +1,5 @@
+v0.11
+Remove some embeded fonts to reduce the module patch size
+
 v0.1
 First module release
