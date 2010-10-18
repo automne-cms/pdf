@@ -17,8 +17,8 @@ while ($table = $q->getValue(0)) {
 }
 if (!$installed) {
 	echo "PDF Export installation : Not installed : Launch installation ...<br />";
-	if (CMS_patch::executeSqlScript(PATH_REALROOT_FS.'/sql/mod_cms_pdf.sql',true)) {
-		CMS_patch::executeSqlScript(PATH_REALROOT_FS.'/sql/mod_cms_pdf.sql',false);
+	if (CMS_patch::executeSqlScript(PATH_MAIN_FS.'/sql/mod_cms_pdf.sql',true)) {
+		CMS_patch::executeSqlScript(PATH_MAIN_FS.'/sql/mod_cms_pdf.sql',false);
 		echo "PDF Export installation : Installation done.<br /><br />";
 	} else {
 		echo "PDF Export installation : INSTALLATION ERROR ! Problem in SQL syntax (SQL tables file) ...<br />";

@@ -71,10 +71,10 @@
 >	/automne/tcpdf/cache/.htaccess
 >	/pdf/pdf.php
 >	/img/cms_pdf/loader.gif
->	/sql/messages/fr/cms_pdf.sql
->	/sql/messages/en/cms_pdf.sql
->	/sql/mod_cms_pdf.sql
+>	/automne/sql/messages/fr/cms_pdf.sql
+>	/automne/sql/messages/en/cms_pdf.sql
+>	/automne/sql/mod_cms_pdf.sql
 #Files to execute
-x	/sql/messages/fr/cms_pdf.sql
-x	/sql/messages/en/cms_pdf.sql
+x	/automne/sql/messages/fr/cms_pdf.sql
+x	/automne/sql/messages/en/cms_pdf.sql
 x	/cms_pdf_install.php
