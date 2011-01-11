@@ -185,26 +185,10 @@ if (!isset($attributes['cache']) || (isset($attributes['cache']) && io::isPositi
 	if (!isset($attributes['cache'])) {
 		$attributes['cache'] = CMS_pdf::PDF_DEFAULT_CACHE_LENGTH;
 	}
-	
-	//Cache options
-	$frontendOptions = array(
-		'lifetime' 			=> $attributes['cache'], // cache duration
-		'caching' 			=> true,
-		'cache_id_prefix'	=> MOD_CMS_PDF_CODENAME
-	);
-	$backendOptions = array(
-		'cache_dir' => PATH_CACHE_FS.'/', // Directory where to put the cache files
-		'cache_file_umask' => octdec(FILES_CHMOD),
-		'hashed_directory_umask' => octdec(DIRS_CHMOD),
-	);
-	// getting a Zend_Cache_Core object
-	try {
-		$cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
-	} catch (Zend_Cache_Exception $e) {
-		CMS_query::raiseError($e->getMessage());
-	}
+	//create cache object
+	$cache = new CMS_cache($cacheRef, MOD_CMS_PDF_CODENAME, $attributes['cache'], false);
 	$datas = '';
-	if (isset($cache) && ($datas = $cache->load($cacheRef))) {
+	if ($cache->exist() && ($datas = $cache->load())) {
 		//send cache content
 		header('Content-Type: application/pdf', true);
 		header('Content-Transfer-Encoding: binary', true);
