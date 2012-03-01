@@ -55,13 +55,13 @@ if (!defined('PDF_AUTHOR')) {
  * image logo
  */
 if (!defined('PDF_HEADER_LOGO')) {
-	define ('PDF_HEADER_LOGO', '../../admin/img/logo_small.gif');
+	define ('PDF_HEADER_LOGO', '../../../img/sydom/logoPDF.gif');
 }
 /**
  * header logo image width [mm]
  */
 if (!defined('PDF_HEADER_LOGO_WIDTH')) {
-	define ('PDF_HEADER_LOGO_WIDTH', 6);
+	define ('PDF_HEADER_LOGO_WIDTH', 12);
 }
 /**
  *  document unit of measure [pt=point, mm=millimeter, cm=centimeter, in=inch]
