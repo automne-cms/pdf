@@ -1,3 +1,6 @@
+v0.17
+[BUG] : Correct a bug in an image reference in tcpdf config
+
 v0.16
 [REFACTOR] : Update TCPDF to version 5.9.149
 

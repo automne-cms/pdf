@@ -19,8 +19,8 @@
   */
 
 define('K_TCPDF_EXTERNAL_CONFIG', true);
-define ('K_PATH_MAIN', $_SERVER['DOCUMENT_ROOT'].'/automne/tcpdf/');
-define ('K_PATH_URL', '/automne/tcpdf/');
+define ('K_PATH_MAIN', PATH_REALROOT_FS.'/automne/tcpdf/');
+define ('K_PATH_URL', PATH_REALROOT_WR.'/automne/tcpdf/');
 define ('K_PATH_FONTS', K_PATH_MAIN.'fonts/');
 define ('K_PATH_CACHE', K_PATH_MAIN.'cache/');
 define ('K_PATH_URL_CACHE', K_PATH_URL.'cache/');
@@ -55,13 +55,13 @@ if (!defined('PDF_AUTHOR')) {
  * image logo
  */
 if (!defined('PDF_HEADER_LOGO')) {
-	define ('PDF_HEADER_LOGO', '../../../img/sydom/logoPDF.gif');
+	define ('PDF_HEADER_LOGO', '../../admin/img/logo_small.gif');
 }
 /**
  * header logo image width [mm]
  */
 if (!defined('PDF_HEADER_LOGO_WIDTH')) {
-	define ('PDF_HEADER_LOGO_WIDTH', 12);
+	define ('PDF_HEADER_LOGO_WIDTH', 6);
 }
 /**
  *  document unit of measure [pt=point, mm=millimeter, cm=centimeter, in=inch]

@@ -19,9 +19,9 @@
   */
 
 define("ENABLE_HTML_COMPRESSION", false);
-require_once($_SERVER["DOCUMENT_ROOT"]."/cms_rc_frontend.php");
+require_once(dirname(__FILE__)."/../cms_rc_frontend.php");
 //augment memory and time limits
-@ini_set('memory_limit', '128M');
+@ini_set('memory_limit', '256M');
 @set_time_limit(0);
 @ini_set('output_buffering','Off');
 
@@ -380,6 +380,7 @@ if (isset($tree)) {
 				}
 				//clean page
 				unset($pages[$pageId]);
+				unset($page);
 				if ($waitScreen) {
 					echo "\n";
 					@ob_start();
@@ -414,6 +415,7 @@ if (isset($tree)) {
 		}
 		//clean page
 		unset($pages[$pageId]);
+		unset($page);
 		if ($waitScreen) {
 			echo "\n";
 			@ob_start();
